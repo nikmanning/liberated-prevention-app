@@ -10,8 +10,8 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
-      setTimeout(onComplete, 500); // Allow fade out animation to complete
-    }, 2500); // Show splash for 2.5 seconds
+      setTimeout(onComplete, 500);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -22,7 +22,7 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
           }
           to {
             opacity: 1;
@@ -30,78 +30,74 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
           }
         }
 
+        @keyframes logoScale {
+          0% {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
         .animate-fade-in-up {
-          animation: fadeInUp 0.8s ease-out forwards;
+          animation: fadeInUp 0.6s ease-out forwards;
           opacity: 0;
         }
 
-        .animation-delay-300 {
+        .animate-logo {
+          animation: logoScale 1s ease-out forwards;
+          opacity: 0;
+        }
+
+        .delay-300 {
           animation-delay: 0.3s;
         }
 
-        .animation-delay-600 {
+        .delay-600 {
           animation-delay: 0.6s;
         }
 
-        .animation-delay-900 {
+        .delay-900 {
           animation-delay: 0.9s;
-        }
-
-        .animation-delay-1200 {
-          animation-delay: 1.2s;
-        }
-
-        .bounce-delay-0 {
-          animation-delay: 0s;
-        }
-
-        .bounce-delay-200 {
-          animation-delay: 0.2s;
-        }
-
-        .bounce-delay-400 {
-          animation-delay: 0.4s;
         }
       `}</style>
       
       <div 
-        className={`fixed inset-0 bg-gradient-to-br from-indigo-700 via-indigo-600 to-teal-500 flex items-center justify-center z-50 transition-opacity duration-500 ${
+        className={`fixed inset-0 bg-white flex items-center justify-center z-50 transition-opacity duration-500 ${
           fadeOut ? 'opacity-0' : 'opacity-100'
         }`}
       >
-        <div className="text-center space-y-8">
-          {/* Logo with animation */}
-          <div className="animate-pulse">
-            <div className="w-24 h-24 mx-auto mb-6 transform transition-all duration-1000 animate-bounce">
+        <div className="max-w-md mx-auto text-center space-y-8 px-6">
+          {/* Logo */}
+          <div className="animate-logo">
+            <div className="w-20 h-20 mx-auto mb-6">
               <img 
                 src="/logo.png" 
                 alt="Liberated Logo"
-                className="w-full h-full filter brightness-0 invert"
+                className="w-full h-full"
               />
             </div>
           </div>
 
-          {/* App Name with staggered animation */}
-          <div className="space-y-2">
-            <h1 className="text-4xl font-bold text-white animate-fade-in-up animation-delay-300">
+          {/* App Name */}
+          <div className="space-y-3">
+            <h1 className="text-3xl font-bold text-slate-900 animate-fade-in-up delay-300">
               Liberated
             </h1>
-            <p className="text-xl text-indigo-100 font-medium animate-fade-in-up animation-delay-600">
-              Prevention App
-            </p>
-            <p className="text-sm text-indigo-200 animate-fade-in-up animation-delay-900">
+            <p className="text-sm text-slate-500 font-medium animate-fade-in-up delay-600">
               by Chicago Strategic Action Council
             </p>
           </div>
 
-          {/* Loading indicator */}
-          <div className="flex justify-center animate-fade-in-up animation-delay-1200">
-            <div className="flex space-x-1">
-              <div className="w-2 h-2 bg-white rounded-full animate-bounce bounce-delay-0"></div>
-              <div className="w-2 h-2 bg-white rounded-full animate-bounce bounce-delay-200"></div>
-              <div className="w-2 h-2 bg-white rounded-full animate-bounce bounce-delay-400"></div>
-            </div>
-          </div>
+          {/* Tagline */}
+          <p className="text-slate-600 text-sm leading-relaxed animate-fade-in-up delay-900">
+            Reimagining Prevention in Chicago
+          </p>
         </div>
       </div>
     </>
