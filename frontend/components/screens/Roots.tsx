@@ -10,6 +10,7 @@ export function Roots() {
       title: 'Youth Voice: "We Know What We Need"',
       author: 'Maria, Age 17',
       tag: 'Youth Voice',
+      chip: 'Youth',
       image: '/api/placeholder/300/200',
       summary: 'Young people share their vision for prevention programs that actually work',
       fullStory: '"Nobody asked us what we actually needed until CSAC came to our school. We told them: we need mentors who look like us, programs that happen in our neighborhood, and adults who listen instead of lecture. The best prevention work happens when you trust young people to be experts on their own lives."',
@@ -21,6 +22,7 @@ export function Roots() {
       title: 'Provider Innovation: Community Healing Circles',
       author: 'Dr. James Washington',
       tag: 'Provider Innovation',
+      chip: 'Providers',
       image: '/api/placeholder/300/200',
       summary: 'A provider transforms their approach by centering community wisdom',
       fullStory: '"After 20 years in traditional therapy, I learned more about healing in my first community circle than in graduate school. Elders in Bronzeville taught me that healing happens in relationship, not isolation. Now our clinic looks completely different—we have circles, community meals, and elder wisdom at the center of everything."',
@@ -32,6 +34,7 @@ export function Roots() {
       title: 'Equity Win: Funding Goes to Community',
       author: 'Southside Together Organizing for Power',
       tag: 'Equity Win',
+      chip: 'Funders',
       image: '/api/placeholder/300/200',
       summary: 'Grassroots organizing leads to direct community control of prevention funds',
       fullStory: '"For years, money for our communities went to organizations that didn\'t even have offices here. Through CSAC\'s advocacy, we got $2 million in direct funding for community-controlled prevention. Now mothers who lost children to violence are designing programs, not just participating in them."',
@@ -43,6 +46,7 @@ export function Roots() {
       title: 'Innovation: Healing-Centered Schools',
       author: 'Chicago Educators United',
       tag: 'System Innovation',
+      chip: 'Providers',
       image: '/api/placeholder/300/200',
       summary: 'Educators reimagine discipline through restorative justice practices',
       fullStory: '"We replaced suspension with healing circles. Instead of sending kids home for fighting, we bring families together to understand what\'s really happening. Students are teaching us that most \'bad behavior\' is actually trauma response. When we address the trauma, the behavior changes naturally."',
@@ -133,7 +137,7 @@ export function Roots() {
             <div className="p-4 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2 py-1 rounded-full">
-                  {story.tag}
+                  {story.chip}
                 </span>
               </div>
               <h3 className="font-semibold text-slate-900 text-sm leading-tight">
