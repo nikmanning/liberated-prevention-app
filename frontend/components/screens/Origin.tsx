@@ -34,8 +34,12 @@ export function Origin() {
     <div className="p-6 space-y-8">
       {/* Header */}
       <div className="text-center space-y-4">
-        <div className="w-16 h-16 bg-indigo-700 rounded-full mx-auto flex items-center justify-center">
-          <span className="text-white font-bold text-xl">CSAC</span>
+        <div className="w-16 h-16 rounded-full mx-auto flex items-center justify-center">
+          <img 
+            src="/logo.png" 
+            alt="CSAC Logo"
+            className="w-16 h-16"
+          />
         </div>
         <h1 className="text-2xl font-bold text-slate-900">
           Reimagining Prevention in Chicago
