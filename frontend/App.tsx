@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import { useState, useEffect } from 'react';
 import { SplashScreen } from './components/SplashScreen';
 import { OnboardingStart } from './components/OnboardingStart';
-import { OnboardingProgress } from './components/OnboardingProgress';
+import { OnboardingScreen } from './components/OnboardingScreen';
 import { Navigation } from './components/Navigation';
 import { Origin } from './components/screens/Origin';
 import { Pulse } from './components/screens/Pulse';
@@ -60,35 +60,22 @@ function AppHeader() {
   );
 }
 
-function MainApp({ isOnboarding, onboardingStep, onSkipOnboarding }: { 
-  isOnboarding: boolean; 
-  onboardingStep: number; 
-  onSkipOnboarding: () => void;
-}) {
+function MainApp() {
   return (
     <div className="max-w-md mx-auto bg-white min-h-screen relative">
-      {isOnboarding && (
-        <OnboardingProgress 
-          currentStep={onboardingStep} 
-          totalSteps={6} 
-          onSkip={onSkipOnboarding}
-        />
-      )}
-      <div className={isOnboarding ? 'pt-16' : ''}>
-        <AppHeader />
-        <div className="pb-20">
-          <Routes>
-            <Route path="/" element={<Navigate to="/origin" replace />} />
-            <Route path="/origin" element={<Origin />} />
-            <Route path="/pulse" element={<Pulse />} />
-            <Route path="/compass" element={<Compass />} />
-            <Route path="/lens" element={<Lens />} />
-            <Route path="/flow" element={<Flow />} />
-            <Route path="/roots" element={<Roots />} />
-          </Routes>
-        </div>
-        <Navigation />
+      <AppHeader />
+      <div className="pb-20">
+        <Routes>
+          <Route path="/" element={<Navigate to="/origin" replace />} />
+          <Route path="/origin" element={<Origin />} />
+          <Route path="/pulse" element={<Pulse />} />
+          <Route path="/compass" element={<Compass />} />
+          <Route path="/lens" element={<Lens />} />
+          <Route path="/flow" element={<Flow />} />
+          <Route path="/roots" element={<Roots />} />
+        </Routes>
       </div>
+      <Navigation />
     </div>
   );
 }
@@ -98,7 +85,6 @@ export default function App() {
   const [showOnboardingStart, setShowOnboardingStart] = useState(false);
   const [isOnboarding, setIsOnboarding] = useState(false);
   const [onboardingStep, setOnboardingStep] = useState(1);
-  const [visitedScreens, setVisitedScreens] = useState<Set<string>>(new Set());
 
   const handleSplashComplete = () => {
     setShowSplash(false);
@@ -122,38 +108,15 @@ export default function App() {
     localStorage.setItem('liberated-onboarding-completed', 'true');
   };
 
-  // Track screen visits during onboarding
-  useEffect(() => {
-    if (isOnboarding) {
-      const currentPath = window.location.pathname;
-      const screenMap: { [key: string]: number } = {
-        '/origin': 1,
-        '/pulse': 2,
-        '/compass': 3,
-        '/lens': 4,
-        '/flow': 5,
-        '/roots': 6
-      };
-
-      if (screenMap[currentPath]) {
-        setVisitedScreens(prev => {
-          const newVisited = new Set(prev);
-          newVisited.add(currentPath);
-          return newVisited;
-        });
-        
-        setOnboardingStep(screenMap[currentPath]);
-        
-        // Complete onboarding when all screens visited
-        if (visitedScreens.size === 5 && !visitedScreens.has(currentPath)) {
-          setTimeout(() => {
-            setIsOnboarding(false);
-            localStorage.setItem('liberated-onboarding-completed', 'true');
-          }, 2000);
-        }
-      }
+  const handleOnboardingNext = () => {
+    if (onboardingStep < 6) {
+      setOnboardingStep(onboardingStep + 1);
+    } else {
+      // Complete onboarding
+      setIsOnboarding(false);
+      localStorage.setItem('liberated-onboarding-completed', 'true');
     }
-  }, [isOnboarding, visitedScreens]);
+  };
 
   if (showSplash) {
     return <SplashScreen onComplete={handleSplashComplete} />;
@@ -168,14 +131,21 @@ export default function App() {
     );
   }
 
+  if (isOnboarding) {
+    return (
+      <OnboardingScreen
+        currentStep={onboardingStep}
+        totalSteps={6}
+        onNext={handleOnboardingNext}
+        onSkip={handleSkipOnboarding}
+      />
+    );
+  }
+
   return (
     <div className="min-h-screen bg-stone-50">
       <Router>
-        <MainApp 
-          isOnboarding={isOnboarding}
-          onboardingStep={onboardingStep}
-          onSkipOnboarding={handleSkipOnboarding}
-        />
+        <MainApp />
       </Router>
     </div>
   );
