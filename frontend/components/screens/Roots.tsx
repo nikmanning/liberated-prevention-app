@@ -52,6 +52,30 @@ export function Roots() {
       fullStory: '"We replaced suspension with healing circles. Instead of sending kids home for fighting, we bring families together to understand what\'s really happening. Students are teaching us that most \'bad behavior\' is actually trauma response. When we address the trauma, the behavior changes naturally."',
       impact: '67% reduction in suspensions across pilot schools',
       icon: Lightbulb
+    },
+    {
+      id: 5,
+      title: 'Youth Leadership: Peer Mentorship Network',
+      author: 'David & Crystal, Austin High',
+      tag: 'Youth Leadership',
+      chip: 'Youth',
+      image: '/api/placeholder/300/200',
+      summary: 'Students create peer support network that transforms school climate',
+      fullStory: '"We started with just 5 students meeting during lunch to talk about real stuff. Now we have 60 peer mentors across 3 schools. We teach conflict resolution, run healing circles when fights happen, and show younger kids that violence isn\'t the only option. Adults used to think we were the problem—now they see we\'re the solution."',
+      impact: '40% reduction in conflicts across participating schools',
+      icon: Users
+    },
+    {
+      id: 6,
+      title: 'Funder Partnership: Flexible Community Investment',
+      author: 'Chicago Community Trust',
+      tag: 'Funding Innovation',
+      chip: 'Funders',
+      image: '/api/placeholder/300/200',
+      summary: 'Foundation shifts to trust-based philanthropy and community-led grantmaking',
+      fullStory: '"CSAC challenged us to think differently about power and accountability. Instead of requiring detailed proposals and reports, we now provide flexible funding based on community priorities. We moved from 18-month grant cycles to 3-year commitments, and community members are on our decision-making committee. The results speak for themselves."',
+      impact: '$5M committed through community-led process',
+      icon: Award
     }
   ];
 
