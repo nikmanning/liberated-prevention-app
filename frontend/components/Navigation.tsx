@@ -30,6 +30,8 @@ export function Navigation() {
             >
               {path === '/roots' ? (
                 <img src="/roots.png" alt="Roots" className="w-5 h-5 mb-1" />
+              ) : path === '/lens' ? (
+                <img src="/lens.png" alt="Lens" className="w-5 h-5 mb-1" />
               ) : (
                 <Icon className="w-5 h-5 mb-1" />
               )}
