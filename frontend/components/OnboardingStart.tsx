@@ -49,7 +49,7 @@ export function OnboardingStart({ onStartTour, onSkip }: OnboardingStartProps) {
         {/* Tour button */}
         <button
           onClick={onStartTour}
-          className="w-full bg-indigo-700 text-white py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-indigo-800 transition-colors"
+          className="w-full bg-[#F27046] text-white py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-[#E55A2E] transition-colors"
         >
           <span>Start the 3-minute tour</span>
           <ArrowRight className="w-5 h-5" />

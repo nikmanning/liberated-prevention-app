@@ -175,7 +175,7 @@ export function Roots() {
       </div>
 
       {/* Community Input CTA */}
-      <div className="bg-indigo-700 text-white p-6 rounded-xl text-center space-y-3">
+      <div className="bg-[#F27046] text-white p-6 rounded-xl text-center space-y-3">
         <h3 className="font-semibold">Share Your Story</h3>
         <p className="text-sm text-indigo-100">
           Have a story about prevention work that's making a difference? 

@@ -230,7 +230,7 @@ export function Compass() {
         </button>
         <button
           onClick={() => setShowResults(!showResults)}
-          className="flex-1 bg-indigo-700 text-white py-3 rounded-xl font-medium hover:bg-indigo-800 transition-colors"
+          className="flex-1 bg-[#F27046] text-white py-3 rounded-xl font-medium hover:bg-[#E55A2E] transition-colors"
         >
           {showResults ? 'Hide Results' : 'See Results'}
         </button>
