@@ -94,11 +94,12 @@ export function Roots() {
         </button>
 
         <div className="space-y-4">
-          <div className="bg-slate-100 h-48 rounded-xl flex items-center justify-center">
-            <div className="text-center text-slate-500">
-              <story.icon className="w-12 h-12 mx-auto mb-2" />
-              <p className="text-sm">Story Photo/Video</p>
-            </div>
+          <div className="h-48 rounded-xl overflow-hidden">
+            <img 
+              src={story.image} 
+              alt={story.title}
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="space-y-3">
@@ -152,11 +153,12 @@ export function Roots() {
             onClick={() => setSelectedStory(story.id)}
             className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all cursor-pointer"
           >
-            <div className="bg-slate-100 h-32 rounded-t-xl flex items-center justify-center">
-              <div className="text-center text-slate-500">
-                <story.icon className="w-8 h-8 mx-auto mb-1" />
-                <p className="text-xs">Story Media</p>
-              </div>
+            <div className="h-32 rounded-t-xl overflow-hidden">
+              <img 
+                src={story.image} 
+                alt={story.title}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-4 space-y-3">
               <div className="flex items-center justify-between">
