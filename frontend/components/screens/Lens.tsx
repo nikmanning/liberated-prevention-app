@@ -74,7 +74,7 @@ export function Lens() {
 
           <div className="bg-white p-4 rounded-xl border border-slate-200">
             <h3 className="font-semibold text-slate-900 mb-2">Key Impact</h3>
-            <p className="text-teal-700 font-medium">{caseStudy.impact}</p>
+            <p className="text-[#F27046] font-medium">{caseStudy.impact}</p>
           </div>
 
           <div className="bg-orange-50 p-4 rounded-xl border border-orange-200">

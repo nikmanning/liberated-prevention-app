@@ -48,7 +48,7 @@ export function Pulse() {
       {/* Header */}
       <div className="text-center space-y-2">
         <div className="flex items-center justify-center space-x-2">
-          <BarChart3 className="w-6 h-6 text-teal-600" />
+          <BarChart3 className="w-6 h-6 text-[#F27046]" />
           <h1 className="text-2xl font-bold text-[#212221]">Counter-Metrics Dashboard</h1>
         </div>
         <p className="text-slate-600">

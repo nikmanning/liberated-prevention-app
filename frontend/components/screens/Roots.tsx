@@ -119,7 +119,7 @@ export function Roots() {
 
           <div className="bg-white p-4 rounded-xl border border-slate-200">
             <h3 className="font-semibold text-slate-900 mb-2">Impact</h3>
-            <p className="text-teal-700 font-medium">{story.impact}</p>
+            <p className="text-[#F27046] font-medium">{story.impact}</p>
           </div>
 
           <div className="bg-orange-50 p-4 rounded-xl border border-orange-200">
@@ -160,7 +160,7 @@ export function Roots() {
             </div>
             <div className="p-4 space-y-3">
               <div className="flex items-center justify-between">
-                <span className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2 py-1 rounded-full">
+                <span className="inline-block bg-[#F27046]/10 text-[#212221] text-xs font-medium px-2 py-1 rounded-full">
                   {story.chip}
                 </span>
               </div>

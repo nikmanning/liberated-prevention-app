@@ -157,7 +157,7 @@ export function Origin() {
           
           {/* Current Milestone Display */}
           <div className="text-center">
-            <div className="text-2xl font-bold text-teal-600 mb-1">
+            <div className="text-2xl font-bold text-[#F27046] mb-1">
               {getCurrentMilestone().year}
             </div>
             <div className="text-lg font-semibold text-slate-900 mb-2">

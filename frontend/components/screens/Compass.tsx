@@ -158,7 +158,7 @@ export function Compass() {
         <h3 className="font-semibold text-slate-900 mb-4 text-center">Live Budget Visualization</h3>
         <PieChartComponent size="large" />
         <div className="text-center mt-4">
-          <span className={`text-sm font-medium ${getTotalPercent() === 100 ? 'text-teal-600' : 'text-slate-500'}`}>
+          <span className={`text-sm font-medium ${getTotalPercent() === 100 ? 'text-[#F27046]' : 'text-slate-500'}`}>
             Total: {getTotalPercent()}% / 100%
           </span>
         </div>
