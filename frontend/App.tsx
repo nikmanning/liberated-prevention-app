@@ -88,12 +88,7 @@ export default function App() {
 
   const handleSplashComplete = () => {
     setShowSplash(false);
-    
-    // Check if user has completed onboarding before
-    const hasCompletedOnboarding = localStorage.getItem('liberated-onboarding-completed');
-    if (!hasCompletedOnboarding) {
-      setShowOnboardingStart(true);
-    }
+    setShowOnboardingStart(true);
   };
 
   const handleStartTour = () => {
@@ -105,7 +100,6 @@ export default function App() {
   const handleSkipOnboarding = () => {
     setShowOnboardingStart(false);
     setIsOnboarding(false);
-    localStorage.setItem('liberated-onboarding-completed', 'true');
   };
 
   const handleOnboardingNext = () => {
@@ -114,7 +108,6 @@ export default function App() {
     } else {
       // Complete onboarding
       setIsOnboarding(false);
-      localStorage.setItem('liberated-onboarding-completed', 'true');
     }
   };
 
