@@ -121,11 +121,11 @@ export function Flow() {
             {/* Right connection */}
             <line x1="60%" y1="50%" x2="75%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Bottom-right connection */}
-            <line x1="57%" y1="60%" x2="68%" y2="68%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="55%" y1="58%" x2="68%" y2="72%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Left connection */}
             <line x1="40%" y1="50%" x2="25%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Bottom-left connection */}
-            <line x1="43%" y1="60%" x2="32%" y2="68%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="45%" y1="58%" x2="32%" y2="72%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
           </svg>
         </div>
       </div>
