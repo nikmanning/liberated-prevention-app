@@ -9,7 +9,7 @@ export function Flow() {
       id: 'referrals',
       icon: Users,
       label: 'Referrals',
-      color: 'bg-teal-500',
+      color: 'bg-[#F27046]',
       position: 'top',
       description: 'Seamless client referrals between organizations with consent-based data sharing.',
       features: ['Smart matching', 'Progress tracking', 'Outcome reporting']
@@ -18,7 +18,7 @@ export function Flow() {
       id: 'calendar',
       icon: Calendar,
       label: 'Calendar',
-      color: 'bg-orange-500',
+      color: 'bg-[#F27046]',
       position: 'right',
       description: 'Coordinated scheduling and event management across prevention networks.',
       features: ['Shared events', 'Resource booking', 'Conflict detection']
@@ -27,7 +27,7 @@ export function Flow() {
       id: 'privacy',
       icon: Shield,
       label: 'Privacy',
-      color: 'bg-purple-500',
+      color: 'bg-[#F27046]',
       position: 'bottom-right',
       description: 'Community-controlled data governance with transparency and consent.',
       features: ['Data sovereignty', 'Consent management', 'Audit trails']
@@ -36,7 +36,7 @@ export function Flow() {
       id: 'resources',
       icon: Share2,
       label: 'Resources',
-      color: 'bg-green-500',
+      color: 'bg-[#F27046]',
       position: 'left',
       description: 'Shared resource directory and collaboration tools for prevention work.',
       features: ['Asset mapping', 'Collaboration tools', 'Impact tracking']
@@ -45,7 +45,7 @@ export function Flow() {
       id: 'updates',
       icon: Clock,
       label: 'Updates',
-      color: 'bg-yellow-600',
+      color: 'bg-[#F27046]',
       position: 'bottom-left',
       description: 'Real-time updates and notifications across the prevention network.',
       features: ['Status updates', 'Alert system', 'Progress reports']
@@ -80,19 +80,19 @@ export function Flow() {
       </div>
 
       {/* Interactive Diagram */}
-      <div className="relative bg-gradient-to-br from-indigo-50 to-teal-50 p-8 pb-4 rounded-2xl min-h-96">
+      <div className="relative bg-gradient-to-br from-[#F27046]/10 to-[#F27046]/5 p-8 pb-4 rounded-2xl min-h-96">
         <div className="relative h-80">
           {/* Central Hub */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <button
               onClick={() => setSelectedHub('central')}
-              className={`w-20 h-20 bg-indigo-700 rounded-full flex items-center justify-center hover:bg-indigo-800 transition-colors cursor-pointer shadow-lg ${
-                selectedHub === 'central' ? 'ring-4 ring-indigo-300' : ''
+              className={`w-20 h-20 bg-[#212221] rounded-full flex items-center justify-center hover:bg-[#212221]/90 transition-colors cursor-pointer shadow-lg ${
+                selectedHub === 'central' ? 'ring-4 ring-[#212221]/30' : ''
               }`}
             >
               <Database className="w-10 h-10 text-white" />
             </button>
-            <p className="text-center text-sm font-medium mt-5 text-indigo-900">
+            <p className="text-center text-sm font-medium mt-5 text-[#212221]">
               Shared Hub
             </p>
           </div>
@@ -103,7 +103,7 @@ export function Flow() {
               <button
                 onClick={() => setSelectedHub(hub.id)}
                 className={`w-16 h-16 ${hub.color} rounded-full flex items-center justify-center hover:scale-110 transition-all cursor-pointer shadow-lg ${
-                  selectedHub === hub.id ? 'ring-4 ring-white ring-opacity-60' : ''
+                  selectedHub === hub.id ? 'ring-4 ring-[#F27046]/30' : ''
                 }`}
               >
                 <hub.icon className="w-8 h-8 text-white" />
