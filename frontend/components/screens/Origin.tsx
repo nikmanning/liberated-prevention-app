@@ -1,6 +1,10 @@
-import { ArrowRight, Users, Target, Network, Heart } from 'lucide-react';
+import { ArrowRight, Users, Target, Network, Heart, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState } from 'react';
 
 export function Origin() {
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
+  const [timelinePosition, setTimelinePosition] = useState(50); // 0-100 percentage
+
   const workgroups = [
     {
       icon: Target,
@@ -24,11 +28,44 @@ export function Origin() {
     }
   ];
 
-  const milestones = [
-    { year: '2022', title: 'CSAC Formation' },
-    { year: '2023', title: 'Coalition Building' },
-    { year: '2024', title: 'Systems Innovation' }
+  const accordionItems = [
+    {
+      id: 'theory',
+      title: 'Theory of Change',
+      content: 'CSAC believes that sustainable prevention requires shifting power to communities most affected by violence. Our theory centers on building authentic partnerships, measuring what matters to communities, and creating systems that respond to local wisdom and needs.'
+    },
+    {
+      id: 'workgroups',
+      title: 'Workgroups',
+      content: 'Four collaborative workgroups drive our impact: Improved Service Quality ensures programs meet community standards; Funding & Strategy aligns resources with community priorities; Coordinated Prevention Network connects organizations and reduces duplication; Culturally Responsive Services centers racial equity and community voice in all prevention work.'
+    },
+    {
+      id: 'values',
+      title: 'Values',
+      content: 'Community leadership, racial equity, data transparency, collaborative innovation, and healing-centered approaches guide everything we do. We believe those closest to the problem are closest to the solution.'
+    }
   ];
+
+  const timelineMilestones = [
+    { year: 2019, position: 0, title: 'Vision Begins', caption: 'Community leaders identify need for coordinated prevention approach' },
+    { year: 2022, position: 50, title: 'CSAC Formation', caption: 'Official launch with founding organizations and initial funding' },
+    { year: 2023, position: 75, title: 'Coalition Building', caption: 'Expanded membership and workgroup development' },
+    { year: 2025, position: 100, title: 'Systems Innovation', caption: 'Full implementation of connected prevention network' }
+  ];
+
+  const getCurrentMilestone = () => {
+    let currentMilestone = timelineMilestones[0];
+    for (const milestone of timelineMilestones) {
+      if (timelinePosition >= milestone.position) {
+        currentMilestone = milestone;
+      }
+    }
+    return currentMilestone;
+  };
+
+  const toggleAccordion = (id: string) => {
+    setOpenAccordion(openAccordion === id ? null : id);
+  };
 
   return (
     <div className="p-6 space-y-8">
@@ -61,6 +98,78 @@ export function Origin() {
         </p>
       </div>
 
+      {/* What is CSAC? Accordion */}
+      <div className="space-y-4">
+        <h2 className="text-lg font-semibold text-slate-900">What is CSAC?</h2>
+        <div className="space-y-2">
+          {accordionItems.map((item) => (
+            <div key={item.id} className="bg-white rounded-xl border border-slate-200">
+              <button
+                onClick={() => toggleAccordion(item.id)}
+                className="w-full p-4 text-left flex items-center justify-between hover:bg-slate-50 rounded-xl transition-colors"
+              >
+                <span className="font-medium text-slate-900">{item.title}</span>
+                {openAccordion === item.id ? (
+                  <ChevronUp className="w-5 h-5 text-slate-500" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-slate-500" />
+                )}
+              </button>
+              {openAccordion === item.id && (
+                <div className="px-4 pb-4">
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.content}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Interactive Timeline */}
+      <div className="space-y-4">
+        <h2 className="text-lg font-semibold text-slate-900">Our Journey</h2>
+        <div className="bg-slate-50 p-6 rounded-xl">
+          {/* Timeline Slider */}
+          <div className="relative mb-6">
+            <div className="w-full h-2 bg-slate-200 rounded-full">
+              <div 
+                className="h-2 bg-teal-500 rounded-full transition-all duration-300"
+                style={{ width: `${timelinePosition}%` }}
+              ></div>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={timelinePosition}
+              onChange={(e) => setTimelinePosition(Number(e.target.value))}
+              className="absolute top-0 w-full h-2 opacity-0 cursor-pointer"
+            />
+            {/* Milestone markers */}
+            {timelineMilestones.map((milestone, index) => (
+              <div
+                key={index}
+                className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-white border-2 border-teal-500 rounded-full"
+                style={{ left: `${milestone.position}%` }}
+              ></div>
+            ))}
+          </div>
+          
+          {/* Current Milestone Display */}
+          <div className="text-center">
+            <div className="text-2xl font-bold text-teal-600 mb-1">
+              {getCurrentMilestone().year}
+            </div>
+            <div className="text-lg font-semibold text-slate-900 mb-2">
+              {getCurrentMilestone().title}
+            </div>
+            <p className="text-sm text-slate-600">
+              {getCurrentMilestone().caption}
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Workgroups */}
       <div className="space-y-4">
         <h2 className="text-lg font-semibold text-slate-900">Our Workgroups</h2>
@@ -83,25 +192,6 @@ export function Origin() {
                   </p>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Timeline */}
-      <div className="space-y-4">
-        <h2 className="text-lg font-semibold text-slate-900">Our Journey</h2>
-        <div className="flex justify-between items-center bg-slate-50 p-4 rounded-xl">
-          {milestones.map((milestone, index) => (
-            <div key={index} className="text-center flex-1">
-              <div className="w-8 h-8 bg-indigo-700 rounded-full mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white text-xs font-bold">
-                  {milestone.year.slice(-2)}
-                </span>
-              </div>
-              <p className="text-xs font-medium text-slate-700">
-                {milestone.title}
-              </p>
             </div>
           ))}
         </div>
