@@ -34,7 +34,7 @@ function AppHeader() {
   };
 
   return (
-    <header className="bg-white relative overflow-hidden border-b border-slate-100">
+    <header className="bg-white relative overflow-hidden border-b border-slate-100 shadow-md">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-3">
           <div className="h-10 flex items-center justify-center">
