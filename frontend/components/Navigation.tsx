@@ -22,20 +22,20 @@ export function Navigation() {
             <Link
               key={path}
               to={path}
-              className={`flex flex-col items-center py-2 px-1 rounded-lg transition-all ${
-                isActive
-                  ? 'text-[#F27046] bg-[#F27046]/10'
-                  : 'text-slate-500 hover:text-[#F27046]'
-              }`}
+              className="flex flex-col items-center py-2 px-1 transition-all"
             >
-              {path === '/roots' ? (
-                <img src="/roots.png" alt="Roots" className="w-5 h-5 mb-1" />
-              ) : path === '/lens' ? (
-                <img src="/lens.png" alt="Lens" className="w-5 h-5 mb-1" />
-              ) : (
-                <Icon className="w-5 h-5 mb-1" />
-              )}
-              <span className="text-xs font-medium">{label}</span>
+              <div className={`flex items-center justify-center w-12 h-12 rounded-full mb-1 transition-all ${
+                isActive ? 'bg-slate-100' : ''
+              }`}>
+                {path === '/roots' ? (
+                  <img src="/roots.png" alt="Roots" className="w-5 h-5" />
+                ) : path === '/lens' ? (
+                  <img src="/lens.png" alt="Lens" className="w-5 h-5" />
+                ) : (
+                  <Icon className="w-5 h-5 text-[#F27046]" />
+                )}
+              </div>
+              <span className="text-xs font-medium text-[#212221]">{label}</span>
             </Link>
           );
         })}
