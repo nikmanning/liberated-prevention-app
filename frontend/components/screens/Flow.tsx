@@ -27,7 +27,7 @@ export function Flow() {
       </div>
 
       {/* Vision Diagram */}
-      <div className="relative bg-gradient-to-br from-indigo-50 to-teal-50 p-8 rounded-2xl min-h-64">
+      <div className="relative bg-gradient-to-br from-indigo-50 to-teal-50 p-8 rounded-2xl min-h-96">
         <div className="relative h-48">
           {/* Central Hub */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
