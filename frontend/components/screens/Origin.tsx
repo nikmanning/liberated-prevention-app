@@ -58,7 +58,7 @@ export function Origin() {
           {workgroups.map((group, index) => (
             <div
               key={index}
-              className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white p-4 rounded-xl border border-slate-200 hover:border-slate-300 transition-all"
             >
               <div className="flex items-start space-x-3">
                 <div className="p-2 bg-teal-100 rounded-lg">

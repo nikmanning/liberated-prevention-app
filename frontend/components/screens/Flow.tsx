@@ -31,7 +31,7 @@ export function Flow() {
         <div className="relative h-48">
           {/* Central Hub */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="w-16 h-16 bg-indigo-700 rounded-full flex items-center justify-center shadow-lg">
+            <div className="w-16 h-16 bg-indigo-700 rounded-full flex items-center justify-center">
               <Database className="w-8 h-8 text-white" />
             </div>
             <p className="text-center text-xs font-medium mt-2 text-indigo-900">

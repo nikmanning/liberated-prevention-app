@@ -89,7 +89,7 @@ export function Roots() {
             </p>
           </div>
 
-          <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <div className="bg-white p-4 rounded-xl border border-slate-200">
             <h3 className="font-semibold text-slate-900 mb-2">Impact</h3>
             <p className="text-teal-700 font-medium">{story.impact}</p>
           </div>

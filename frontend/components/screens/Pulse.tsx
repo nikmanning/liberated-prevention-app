@@ -76,7 +76,7 @@ export function Pulse() {
         {metrics.map((metric, index) => (
           <div
             key={index}
-            className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm"
+            className="bg-white p-4 rounded-xl border border-slate-200"
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-semibold text-slate-900">{metric.title}</h3>

@@ -143,7 +143,7 @@ export function Compass() {
       {/* Results */}
       {showResults && (
         <div className="space-y-4">
-          <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <div className="bg-white p-4 rounded-xl border border-slate-200">
             <div className="flex items-center space-x-2 mb-3">
               <PieChart className="w-5 h-5 text-indigo-600" />
               <h3 className="font-semibold text-slate-900">Budget Visualization</h3>

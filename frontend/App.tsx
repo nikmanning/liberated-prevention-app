@@ -30,7 +30,7 @@ function AppHeader() {
   };
 
   return (
-    <header className="bg-white shadow-sm relative overflow-hidden border-b border-slate-100">
+    <header className="bg-white relative overflow-hidden border-b border-slate-100">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 flex items-center justify-center">
@@ -46,7 +46,7 @@ function AppHeader() {
           </div>
         </div>
         
-        <div className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
+        <div className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
           {getTabDisplayName()}
         </div>
       </div>
