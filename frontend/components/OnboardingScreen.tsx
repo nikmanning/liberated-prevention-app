@@ -94,10 +94,10 @@ export function OnboardingScreen({ currentStep, totalSteps, onNext, onSkip }: On
               key={index}
               className={`w-2.5 h-2.5 rounded-full transition-all ${
                 index < currentStep
-                  ? 'bg-teal-500'
+                  ? 'bg-[#212221]'
                   : index === currentStep - 1
-                  ? 'bg-teal-300'
-                  : 'bg-slate-200'
+                  ? 'bg-[#212221]'
+                  : 'bg-[#212221]/20'
               }`}
             />
           ))}
