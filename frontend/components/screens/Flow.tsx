@@ -55,15 +55,15 @@ export function Flow() {
   const getPositionClasses = (position: string) => {
     switch (position) {
       case 'top':
-        return 'absolute top-4 left-1/2 transform -translate-x-1/2';
+        return 'absolute top-2 left-1/2 transform -translate-x-1/2';
       case 'right':
-        return 'absolute top-1/2 right-8 transform -translate-y-1/2';
+        return 'absolute top-1/2 right-4 transform -translate-y-1/2';
       case 'bottom-right':
-        return 'absolute bottom-8 right-16';
+        return 'absolute bottom-4 right-8';
       case 'left':
-        return 'absolute top-1/2 left-8 transform -translate-y-1/2';
+        return 'absolute top-1/2 left-4 transform -translate-y-1/2';
       case 'bottom-left':
-        return 'absolute bottom-8 left-16';
+        return 'absolute bottom-4 left-8';
       default:
         return '';
     }
@@ -117,15 +117,15 @@ export function Flow() {
           {/* Connection Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
             {/* Top connection */}
-            <line x1="50%" y1="50%" x2="50%" y2="15%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="50%" y1="50%" x2="50%" y2="10%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Right connection */}
-            <line x1="50%" y1="50%" x2="85%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="50%" y1="50%" x2="90%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Bottom-right connection */}
-            <line x1="50%" y1="50%" x2="75%" y2="80%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="50%" y1="50%" x2="80%" y2="85%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Left connection */}
-            <line x1="50%" y1="50%" x2="15%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="50%" y1="50%" x2="10%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Bottom-left connection */}
-            <line x1="50%" y1="50%" x2="25%" y2="80%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="50%" y1="50%" x2="20%" y2="85%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
           </svg>
         </div>
       </div>
