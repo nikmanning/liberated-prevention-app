@@ -33,8 +33,34 @@ function AppHeader() {
     <header className="bg-white shadow-sm relative overflow-hidden border-b border-slate-100">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-xl">L</span>
+          <div className="w-10 h-10 flex items-center justify-center">
+            <svg 
+              viewBox="0 0 100 100" 
+              className="w-10 h-10"
+              fill="none"
+            >
+              <path
+                d="M50 10 C72 10, 90 28, 90 50 C90 72, 72 90, 50 90 C36 90, 24 78, 24 64 C24 56, 30 50, 38 50 C42 50, 46 54, 46 58"
+                stroke="#00BFA6"
+                strokeWidth="8"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <path
+                d="M10 50 C10 28, 28 10, 50 10"
+                stroke="#00BFA6"
+                strokeWidth="8"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <path
+                d="M70 76 C78 70, 84 62, 84 52"
+                stroke="#00BFA6"
+                strokeWidth="8"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
           </div>
           <div>
             <h1 className="text-xl font-bold text-slate-900">Liberated</h1>
