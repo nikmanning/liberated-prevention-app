@@ -87,7 +87,7 @@ export function Roots() {
       <div className="p-6 space-y-6">
         <button
           onClick={() => setSelectedStory(null)}
-          className="flex items-center space-x-2 text-indigo-600 hover:text-indigo-800"
+          className="flex items-center space-x-2 text-[#212221] hover:text-[#212221]/80"
         >
           <ArrowLeft className="w-5 h-5" />
           <span>Back to Stories</span>
@@ -183,7 +183,7 @@ export function Roots() {
           Have a story about prevention work that's making a difference? 
           We want to hear from you.
         </p>
-        <button className="bg-white text-indigo-700 px-6 py-2 rounded-lg font-medium hover:bg-indigo-50 transition-colors">
+        <button className="bg-white text-[#212221] px-6 py-2 rounded-lg font-medium hover:bg-[#F27046]/10 transition-colors">
           Submit Story
         </button>
       </div>

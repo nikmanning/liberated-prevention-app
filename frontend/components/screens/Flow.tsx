@@ -204,7 +204,7 @@ export function Flow() {
       {/* Vision Statement */}
       <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-200">
         <h3 className="text-lg font-semibold text-indigo-900 mb-3">Our Vision</h3>
-        <p className="text-indigo-800 text-sm leading-relaxed mb-4">
+        <p className="text-[#212221]/80 text-sm leading-relaxed mb-4">
           This is how referrals, shared calendars, and data-sharing could connect prevention organizations 
           while keeping community needs and privacy at the center.
         </p>
