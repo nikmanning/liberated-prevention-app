@@ -92,7 +92,7 @@ export function Flow() {
             >
               <Database className="w-10 h-10 text-white" />
             </button>
-            <p className="text-center text-sm font-medium mt-3 text-indigo-900">
+            <p className="text-center text-sm font-medium mt-4 text-indigo-900">
               Shared Hub
             </p>
           </div>
