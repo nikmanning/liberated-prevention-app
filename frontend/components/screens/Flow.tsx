@@ -202,17 +202,17 @@ export function Flow() {
       )}
 
       {/* Vision Statement */}
-      <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-200">
-        <h3 className="text-lg font-semibold text-indigo-900 mb-3">Our Vision</h3>
+      <div className="bg-[#212221]/5 p-6 rounded-xl border border-[#212221]/10">
+        <h3 className="text-lg font-semibold text-[#212221] mb-3">Our Vision</h3>
         <p className="text-[#212221]/80 text-sm leading-relaxed mb-4">
           This is how referrals, shared calendars, and data-sharing could connect prevention organizations 
           while keeping community needs and privacy at the center.
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-xs text-indigo-600 font-medium bg-indigo-100 px-3 py-1 rounded-full">
+          <span className="text-xs text-[#212221] font-medium bg-[#212221]/10 px-3 py-1 rounded-full">
             Coming Soon
           </span>
-          <button className="text-sm text-indigo-700 hover:text-indigo-900 font-medium">
+          <button className="text-sm text-[#212221] hover:text-[#212221]/80 font-medium">
             Learn More →
           </button>
         </div>
