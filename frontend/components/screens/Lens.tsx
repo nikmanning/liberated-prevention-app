@@ -117,12 +117,12 @@ export function Lens() {
             <div className="p-4 space-y-3">
               <div className="flex flex-wrap gap-1">
                 {caseStudy.tags.slice(0, 2).map((tag, index) => (
-                  <span key={index} className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2 py-1 rounded-full">
+                  <span key={index} className="inline-block bg-[#F27046]/10 text-[#212221] text-xs font-medium px-2 py-1 rounded-full">
                     {tag}
                   </span>
                 ))}
                 {caseStudy.tags.length > 2 && (
-                  <span className="inline-block bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">
+                  <span className="inline-block bg-[#212221]/10 text-[#212221] text-xs font-medium px-2 py-1 rounded-full">
                     +{caseStudy.tags.length - 2}
                   </span>
                 )}
