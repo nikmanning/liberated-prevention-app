@@ -8,7 +8,7 @@ export function Lens() {
     {
       id: 1,
       title: 'West Side Youth Mentorship',
-      image: '/case-study-1.png',
+      image: '/case-study-1-opt.png',
       tags: ['Youth Development', 'Community Healing', 'Trust Building'],
       summary: 'Community-led mentorship program reduces youth involvement in violence by 40%',
       story: 'In Austin, community elders partnered with local high schools to create a peer mentorship network. By centering cultural knowledge and providing safe spaces for healing conversations, the program has transformed how young people view their futures. The success comes from trust-building, not surveillance.',
@@ -18,7 +18,7 @@ export function Lens() {
     {
       id: 2,
       title: 'Healing Circles Initiative',
-      image: '/case-study-2.png',
+      image: '/case-study-2-opt.png',
       tags: ['Community Healing', 'Restorative Justice', 'Family Support'],
       summary: 'Restorative justice practices strengthen community bonds and reduce recidivism',
       story: 'South Side neighborhoods implemented healing circles as an alternative to punitive responses. Families, victims, and community members come together to address harm through dialogue and collective accountability. This approach has created lasting relationships and reduced repeat incidents.',
@@ -28,7 +28,7 @@ export function Lens() {
     {
       id: 3,
       title: 'Economic Justice Collective',
-      image: '/case-study-3.png',
+      image: '/case-study-3-opt.png',
       tags: ['Economic Development', 'Community Ownership', 'Workforce Development'],
       summary: 'Cooperative businesses create economic stability and community ownership',
       story: 'A group of formerly incarcerated individuals started a cleaning cooperative that now employs 25 community members. By sharing ownership and decision-making, they have created not just jobs but a model for economic democracy that prevents future involvement in the justice system.',
