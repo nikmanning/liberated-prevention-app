@@ -134,9 +134,9 @@ export function Lens() {
         ))}
       </div>
 
-      <div className="bg-indigo-50 p-4 rounded-xl border border-indigo-200">
-        <h3 className="font-semibold text-indigo-900 mb-2">Why These Stories Matter</h3>
-        <p className="text-sm text-indigo-800">
+      <div className="bg-[#F27046]/10 p-4 rounded-xl border border-[#F27046]/20">
+        <h3 className="font-semibold text-[#212221] mb-2">Why These Stories Matter</h3>
+        <p className="text-sm text-[#212221]/80">
           Each story shows how prevention work succeeds when it's rooted in community 
           wisdom, addresses systemic issues, and measures success through relationships 
           and healing rather than just reduced incidents.
