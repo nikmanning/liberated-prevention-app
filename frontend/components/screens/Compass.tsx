@@ -146,7 +146,7 @@ export function Compass() {
       <div className="text-center space-y-2">
         <div className="flex items-center justify-center space-x-2">
           <CompassIcon className="w-6 h-6 text-indigo-600" />
-          <h1 className="text-2xl font-bold text-slate-900">Budget Allocation Guide</h1>
+          <h1 className="text-2xl font-bold text-[#212221]">Budget Allocation Guide</h1>
         </div>
         <p className="text-slate-600">
           Experiment with different funding approaches and see their impact

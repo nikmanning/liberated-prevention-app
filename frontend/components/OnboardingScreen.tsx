@@ -72,8 +72,8 @@ export function OnboardingScreen({ currentStep, totalSteps, onNext, onSkip }: On
 
         {/* Content */}
         <div className="text-center space-y-4 max-w-sm">
-          <h1 className="text-2xl font-bold text-slate-900">
-            <span className="text-indigo-600">{data.title.split(' ')[0]}</span>
+          <h1 className="text-2xl font-bold text-[#212221]">
+            <span className="text-[#212221]">{data.title.split(' ')[0]}</span>
             {data.title.split(' ').slice(1).join(' ')}
           </h1>
           <p className="text-lg font-medium text-slate-700">

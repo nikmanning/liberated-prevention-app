@@ -49,7 +49,7 @@ export function Pulse() {
       <div className="text-center space-y-2">
         <div className="flex items-center justify-center space-x-2">
           <BarChart3 className="w-6 h-6 text-teal-600" />
-          <h1 className="text-2xl font-bold text-slate-900">Counter-Metrics Dashboard</h1>
+          <h1 className="text-2xl font-bold text-[#212221]">Counter-Metrics Dashboard</h1>
         </div>
         <p className="text-slate-600">
           Measuring what matters: community strength, not just service metrics

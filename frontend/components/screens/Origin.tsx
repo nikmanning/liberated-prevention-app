@@ -78,7 +78,7 @@ export function Origin() {
             className="w-16 h-16"
           />
         </div>
-        <h1 className="text-2xl font-bold text-slate-900">
+        <h1 className="text-2xl font-bold text-[#212221]">
           Reimagining Prevention in Chicago
         </h1>
         

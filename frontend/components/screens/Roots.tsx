@@ -107,7 +107,7 @@ export function Roots() {
                 {story.tag}
               </span>
             </div>
-            <h1 className="text-2xl font-bold text-slate-900">{story.title}</h1>
+            <h1 className="text-2xl font-bold text-[#212221]">{story.title}</h1>
             <p className="text-slate-600 font-medium">— {story.author}</p>
           </div>
 

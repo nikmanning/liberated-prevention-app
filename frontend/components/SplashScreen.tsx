@@ -86,7 +86,7 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
 
           {/* App Name */}
           <div className="space-y-3">
-            <h1 className="text-3xl font-bold text-slate-900 animate-fade-in-up delay-300">
+            <h1 className="text-3xl font-bold text-[#212221] animate-fade-in-up delay-300">
               Liberated
             </h1>
             <p className="text-sm text-slate-500 font-medium animate-fade-in-up delay-600">

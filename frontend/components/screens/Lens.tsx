@@ -68,7 +68,7 @@ export function Lens() {
                 </span>
               ))}
             </div>
-            <h1 className="text-2xl font-bold text-slate-900">{caseStudy.title}</h1>
+            <h1 className="text-2xl font-bold text-[#212221]">{caseStudy.title}</h1>
             <p className="text-slate-600 leading-relaxed">{caseStudy.story}</p>
           </div>
 

@@ -73,7 +73,7 @@ export function Flow() {
     <div className="p-6 space-y-8">
       {/* Header */}
       <div className="text-center space-y-4">
-        <h1 className="text-2xl font-bold text-slate-900">Systems Integration Portal</h1>
+        <h1 className="text-2xl font-bold text-[#212221]">Systems Integration Portal</h1>
         <p className="text-slate-600">
           The future of connected prevention: seamless collaboration while protecting privacy
         </p>

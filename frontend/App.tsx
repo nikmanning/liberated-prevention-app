@@ -45,7 +45,7 @@ function AppHeader() {
             />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-slate-900">Liberated</h1>
+            <h1 className="text-xl font-bold text-[#212221]">Liberated</h1>
             <p className="text-xs text-slate-500 font-medium">by CSAC</p>
           </div>
         </div>

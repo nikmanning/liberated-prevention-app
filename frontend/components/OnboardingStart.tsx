@@ -31,7 +31,7 @@ export function OnboardingStart({ onStartTour, onSkip }: OnboardingStartProps) {
 
         {/* Purpose blurb */}
         <div className="space-y-4">
-          <h1 className="text-2xl font-bold text-slate-900">
+          <h1 className="text-2xl font-bold text-[#212221]">
             Welcome to Liberated
           </h1>
           <div className="space-y-2 text-slate-600 leading-relaxed">
