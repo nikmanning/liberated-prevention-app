@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { SplashScreen } from './components/SplashScreen';
 import { Navigation } from './components/Navigation';
 import { Origin } from './components/screens/Origin';
 import { Pulse } from './components/screens/Pulse';
@@ -56,25 +58,41 @@ function AppHeader() {
   );
 }
 
+function MainApp() {
+  return (
+    <div className="max-w-md mx-auto bg-white min-h-screen relative">
+      <AppHeader />
+      <div className="pb-20">
+        <Routes>
+          <Route path="/" element={<Navigate to="/origin" replace />} />
+          <Route path="/origin" element={<Origin />} />
+          <Route path="/pulse" element={<Pulse />} />
+          <Route path="/compass" element={<Compass />} />
+          <Route path="/lens" element={<Lens />} />
+          <Route path="/flow" element={<Flow />} />
+          <Route path="/roots" element={<Roots />} />
+        </Routes>
+      </div>
+      <Navigation />
+    </div>
+  );
+}
+
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+
+  if (showSplash) {
+    return <SplashScreen onComplete={handleSplashComplete} />;
+  }
+
   return (
     <div className="min-h-screen bg-stone-50">
       <Router>
-        <div className="max-w-md mx-auto bg-white min-h-screen relative">
-          <AppHeader />
-          <div className="pb-20">
-            <Routes>
-              <Route path="/" element={<Navigate to="/origin" replace />} />
-              <Route path="/origin" element={<Origin />} />
-              <Route path="/pulse" element={<Pulse />} />
-              <Route path="/compass" element={<Compass />} />
-              <Route path="/lens" element={<Lens />} />
-              <Route path="/flow" element={<Flow />} />
-              <Route path="/roots" element={<Roots />} />
-            </Routes>
-          </div>
-          <Navigation />
-        </div>
+        <MainApp />
       </Router>
     </div>
   );
