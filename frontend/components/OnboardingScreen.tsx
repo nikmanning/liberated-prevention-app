@@ -66,7 +66,7 @@ export function OnboardingScreen({ currentStep, totalSteps, onNext, onSkip }: On
       {/* Main content */}
       <div className="flex-1 flex flex-col items-center justify-center px-6 pb-20">
         {/* Illustration */}
-        <div className="w-32 h-32 bg-gradient-to-br from-indigo-50 to-teal-50 rounded-full flex items-center justify-center mb-8 border border-slate-100">
+        <div className="w-32 h-32 bg-[#F27046]/10 rounded-full flex items-center justify-center mb-8 border border-slate-100">
           <span className="text-6xl">{data.illustration}</span>
         </div>
 
