@@ -24,8 +24,8 @@ export function Navigation() {
               to={path}
               className={`flex flex-col items-center py-2 px-1 rounded-lg transition-all ${
                 isActive
-                  ? 'text-[#212221] bg-[#F27046]/10'
-                  : 'text-slate-500 hover:text-[#212221]'
+                  ? 'text-[#F27046] bg-[#F27046]/10'
+                  : 'text-slate-500 hover:text-[#F27046]'
               }`}
             >
               {path === '/roots' ? (
