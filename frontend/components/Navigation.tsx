@@ -24,8 +24,8 @@ export function Navigation() {
               to={path}
               className={`flex flex-col items-center py-2 px-1 rounded-lg transition-all ${
                 isActive
-                  ? 'text-indigo-700 bg-indigo-50'
-                  : 'text-slate-500 hover:text-indigo-600'
+                  ? 'text-[#212221] bg-[#F27046]/10'
+                  : 'text-slate-500 hover:text-[#212221]'
               }`}
             >
               <Icon className="w-5 h-5 mb-1" />

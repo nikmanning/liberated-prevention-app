@@ -63,7 +63,7 @@ export function Lens() {
           <div className="space-y-3">
             <div className="flex flex-wrap gap-2">
               {caseStudy.tags.map((tag, index) => (
-                <span key={index} className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-3 py-1 rounded-full">
+                <span key={index} className="inline-block bg-[#F27046]/10 text-[#212221] text-xs font-medium px-3 py-1 rounded-full">
                   {tag}
                 </span>
               ))}

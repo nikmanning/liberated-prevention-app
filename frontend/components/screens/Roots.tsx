@@ -103,7 +103,7 @@ export function Roots() {
 
           <div className="space-y-3">
             <div>
-              <span className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-3 py-1 rounded-full">
+              <span className="inline-block bg-[#F27046]/10 text-[#212221] text-xs font-medium px-3 py-1 rounded-full">
                 {story.tag}
               </span>
             </div>

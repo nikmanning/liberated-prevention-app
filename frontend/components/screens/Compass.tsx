@@ -52,16 +52,16 @@ export function Compass() {
     const badges = [];
     
     if (budgetSliders.servingPeople > 30) {
-      badges.push({ text: '+12% Community Engagement → +8 pts Trust', color: 'bg-teal-100 text-teal-700' });
+      badges.push({ text: '+12% Community Engagement → +8 pts Trust', color: 'bg-[#F27046]/10 text-[#212221]' });
     }
     if (budgetSliders.capacityBuilding > 20) {
-      badges.push({ text: '+15% Partner Stipends → +7 pts Dignity', color: 'bg-blue-100 text-blue-700' });
+      badges.push({ text: '+15% Partner Stipends → +7 pts Dignity', color: 'bg-[#F27046]/10 text-[#212221]' });
     }
     if (budgetSliders.theWork > 25) {
-      badges.push({ text: '+20% Program Innovation → +9 pts Belonging', color: 'bg-purple-100 text-purple-700' });
+      badges.push({ text: '+20% Program Innovation → +9 pts Belonging', color: 'bg-[#F27046]/10 text-[#212221]' });
     }
     if (budgetSliders.evaluation > 10) {
-      badges.push({ text: '+8% Data Collection → +5 pts Accountability', color: 'bg-orange-100 text-orange-700' });
+      badges.push({ text: '+8% Data Collection → +5 pts Accountability', color: 'bg-[#F27046]/10 text-[#212221]' });
     }
 
     return badges;

@@ -180,7 +180,7 @@ export function Origin() {
               className="bg-white p-4 rounded-xl border border-slate-200 hover:border-slate-300 transition-all"
             >
               <div className="flex items-start space-x-3">
-                <div className="p-2 bg-teal-100 rounded-lg">
+                <div className="p-2 bg-[#F27046]/10 rounded-lg">
                   <group.icon className="w-5 h-5 text-teal-700" />
                 </div>
                 <div className="flex-1">
