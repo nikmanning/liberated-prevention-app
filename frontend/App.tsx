@@ -55,7 +55,7 @@ function AppHeader() {
         </div>
       </div>
       
-      <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-teal-500/10 via-teal-400/5 to-transparent rounded-bl-[3rem]"></div>
+      <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-[#F27046]/10 via-[#F27046]/5 to-transparent rounded-bl-[3rem]"></div>
     </header>
   );
 }
