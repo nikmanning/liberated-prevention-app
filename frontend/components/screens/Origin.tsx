@@ -44,6 +44,16 @@ export function Origin() {
         <h1 className="text-2xl font-bold text-slate-900">
           Reimagining Prevention in Chicago
         </h1>
+        
+        {/* Community Image */}
+        <div className="rounded-xl overflow-hidden">
+          <img 
+            src="/community.png" 
+            alt="Community members connecting in Chicago neighborhood"
+            className="w-full h-48 object-cover"
+          />
+        </div>
+        
         <p className="text-slate-600 leading-relaxed">
           The Chicago Strategic Action Council brings together diverse voices to transform 
           how we approach prevention work—centering equity, community wisdom, and 
