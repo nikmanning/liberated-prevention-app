@@ -37,11 +37,11 @@ function AppHeader() {
     <header className="bg-white relative overflow-hidden border-b border-slate-100">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 flex items-center justify-center">
+          <div className="h-10 flex items-center justify-center">
             <img 
               src="/logo-final.png" 
               alt="Liberated Logo"
-              className="w-10 h-10"
+              className="h-10 w-auto"
             />
           </div>
 
