@@ -117,15 +117,15 @@ export function Flow() {
           {/* Connection Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
             {/* Top connection */}
-            <line x1="50%" y1="42%" x2="50%" y2="18%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="50%" y1="40%" x2="50%" y2="25%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Right connection */}
-            <line x1="58%" y1="50%" x2="82%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="60%" y1="50%" x2="75%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Bottom-right connection */}
-            <line x1="56%" y1="58%" x2="72%" y2="77%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="57%" y1="60%" x2="68%" y2="72%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Left connection */}
-            <line x1="42%" y1="50%" x2="18%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="40%" y1="50%" x2="25%" y2="50%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
             {/* Bottom-left connection */}
-            <line x1="44%" y1="58%" x2="28%" y2="77%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
+            <line x1="43%" y1="60%" x2="32%" y2="72%" stroke="#94A3B8" strokeWidth="2" strokeDasharray="5,5" />
           </svg>
         </div>
       </div>
