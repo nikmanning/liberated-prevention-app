@@ -9,7 +9,7 @@ export function Lens() {
       id: 1,
       title: 'West Side Youth Mentorship',
       image: '/api/placeholder/300/200',
-      tag: 'Youth Development',
+      tags: ['Youth Development', 'Community Healing', 'Trust Building'],
       summary: 'Community-led mentorship program reduces youth involvement in violence by 40%',
       story: 'In Austin, community elders partnered with local high schools to create a peer mentorship network. By centering cultural knowledge and providing safe spaces for healing conversations, the program has transformed how young people view their futures. The success comes from trust-building, not surveillance.',
       impact: '87% of participants report increased sense of belonging',
@@ -19,7 +19,7 @@ export function Lens() {
       id: 2,
       title: 'Healing Circles Initiative',
       image: '/api/placeholder/300/200',
-      tag: 'Community Healing',
+      tags: ['Community Healing', 'Restorative Justice', 'Family Support'],
       summary: 'Restorative justice practices strengthen community bonds and reduce recidivism',
       story: 'South Side neighborhoods implemented healing circles as an alternative to punitive responses. Families, victims, and community members come together to address harm through dialogue and collective accountability. This approach has created lasting relationships and reduced repeat incidents.',
       impact: '65% reduction in repeat incidents',
@@ -29,7 +29,7 @@ export function Lens() {
       id: 3,
       title: 'Economic Justice Collective',
       image: '/api/placeholder/300/200',
-      tag: 'Economic Development',
+      tags: ['Economic Development', 'Community Ownership', 'Workforce Development'],
       summary: 'Cooperative businesses create economic stability and community ownership',
       story: 'A group of formerly incarcerated individuals started a cleaning cooperative that now employs 25 community members. By sharing ownership and decision-making, they have created not just jobs but a model for economic democracy that prevents future involvement in the justice system.',
       impact: '92% employment retention rate',
@@ -60,10 +60,12 @@ export function Lens() {
           </div>
 
           <div className="space-y-3">
-            <div>
-              <span className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-3 py-1 rounded-full">
-                {caseStudy.tag}
-              </span>
+            <div className="flex flex-wrap gap-2">
+              {caseStudy.tags.map((tag, index) => (
+                <span key={index} className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-3 py-1 rounded-full">
+                  {tag}
+                </span>
+              ))}
             </div>
             <h1 className="text-2xl font-bold text-slate-900">{caseStudy.title}</h1>
             <p className="text-slate-600 leading-relaxed">{caseStudy.story}</p>
@@ -111,10 +113,17 @@ export function Lens() {
               </div>
             </div>
             <div className="p-4 space-y-3">
-              <div>
-                <span className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2 py-1 rounded-full">
-                  {caseStudy.tag}
-                </span>
+              <div className="flex flex-wrap gap-1">
+                {caseStudy.tags.slice(0, 2).map((tag, index) => (
+                  <span key={index} className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2 py-1 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+                {caseStudy.tags.length > 2 && (
+                  <span className="inline-block bg-slate-100 text-slate-600 text-xs font-medium px-2 py-1 rounded-full">
+                    +{caseStudy.tags.length - 2}
+                  </span>
+                )}
               </div>
               <h3 className="font-semibold text-slate-900">{caseStudy.title}</h3>
               <p className="text-sm text-slate-600">{caseStudy.summary}</p>
