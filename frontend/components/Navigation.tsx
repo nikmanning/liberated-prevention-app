@@ -28,7 +28,11 @@ export function Navigation() {
                   : 'text-slate-500 hover:text-[#212221]'
               }`}
             >
-              <Icon className="w-5 h-5 mb-1" />
+              {path === '/roots' ? (
+                <img src="/roots.png" alt="Roots" className="w-5 h-5 mb-1" />
+              ) : (
+                <Icon className="w-5 h-5 mb-1" />
+              )}
               <span className="text-xs font-medium">{label}</span>
             </Link>
           );
