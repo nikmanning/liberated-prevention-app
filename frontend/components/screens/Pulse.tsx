@@ -12,6 +12,12 @@ export function Pulse() {
       description: 'People feel connected to their community'
     },
     {
+      title: 'Dignity in Services',
+      traditional: '39%',
+      counter: '72%',
+      description: 'Respectful, non-judgmental treatment'
+    },
+    {
       title: 'Trust in Services',
       traditional: '32%',
       counter: '65%',
@@ -24,10 +30,10 @@ export function Pulse() {
       description: 'Services reflect community values'
     },
     {
-      title: 'Youth Leadership',
-      traditional: '15%',
-      counter: '54%',
-      description: 'Young people in decision-making roles'
+      title: 'Community Voice',
+      traditional: '19%',
+      counter: '59%',
+      description: 'Residents shape program decisions'
     },
     {
       title: 'Healing-Centered Approach',
