@@ -25,7 +25,7 @@ export function Navigation() {
               className="flex flex-col items-center py-2 px-1 transition-all"
             >
               <div className={`flex items-center justify-center w-12 h-12 rounded-full mb-1 transition-all ${
-                isActive ? 'bg-slate-100' : ''
+                isActive ? 'bg-[#EFEFEF]' : ''
               }`}>
                 {path === '/roots' ? (
                   <img src="/roots.png" alt="Roots" className="w-5 h-5" />
