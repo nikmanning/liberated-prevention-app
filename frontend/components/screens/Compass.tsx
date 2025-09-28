@@ -226,7 +226,7 @@ export function Compass() {
           className="flex-1 bg-teal-600 text-white py-3 rounded-xl font-medium flex items-center justify-center space-x-2 hover:bg-teal-700 transition-colors"
         >
           <Save className="w-4 h-4" />
-          <span>Save Scenario</span>
+          <span>Scenario</span>
         </button>
         <button
           onClick={() => setShowResults(!showResults)}
