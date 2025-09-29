@@ -73,7 +73,7 @@ export function Origin() {
       <div className="text-center space-y-4">
         <div className="w-16 h-16 rounded-full mx-auto flex items-center justify-center">
           <img 
-            src="/logo.png" 
+            src="/logo_small.png" 
             alt="CSAC Logo"
             className="w-16 h-16"
           />
