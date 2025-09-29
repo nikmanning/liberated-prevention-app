@@ -39,7 +39,7 @@ function AppHeader() {
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 flex items-center justify-center">
             <img 
-              src="/logo.png" 
+              src="/logo_small.png" 
               alt="Liberated Logo"
               className="w-10 h-10"
             />
