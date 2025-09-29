@@ -23,7 +23,7 @@ export function OnboardingStart({ onStartTour, onSkip }: OnboardingStartProps) {
         {/* Logo */}
         <div className="w-20 h-20 mx-auto">
           <img 
-            src="/logo-optimized.png" 
+            src="/logo_small.png" 
             alt="Liberated Logo"
             className="w-full h-full"
           />
