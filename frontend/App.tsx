@@ -44,10 +44,7 @@ function AppHeader() {
               className="w-10 h-10"
             />
           </div>
-          <div>
-            <h1 className="text-xl font-bold text-[#212221]">Liberated</h1>
-            <p className="text-xs text-slate-500 font-medium">by CSAC</p>
-          </div>
+
         </div>
         
         <div className="bg-[#212221] text-white px-4 py-2 rounded-full font-semibold text-sm">
